@@ -1,0 +1,17 @@
+{% extends "result.html" %}
+
+{%block title%}Template{%endblock%}
+
+{%block content%}
+
+<form action="add2/" class="box" method="POST">
+    {% csrf_token %}
+    <h2>Register</h2>
+    <input type="text" name="name" placeholder="username">
+    <input type="password" name="password" placeholder="Password">
+    <input type="text" name="amount" placeholder="money"><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+{%endblock%}
